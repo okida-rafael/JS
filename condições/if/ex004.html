@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        #ptbr{
+            background-image: linear-gradient(to right, green, yellow, blue, white);
+        }
+        #fora{
+            background-image: linear-gradient(to right,white, red, black);
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é brasileiro?</h1>
+
+    <label>Digite aqui o país onde nasceu...</label>
+    <input type="text" name="born" id="born">
+    <input type="button" value="Verificar" onclick="checar()">
+    <div id="res"></div>
+
+    <script>
+        function checar(){
+            var país = document.getElementById('born')
+            var res = document.getElementById('res')
+            var upper = país.value.toUpperCase()//deixa as letras maiusculas
+            
+
+            if(upper == 'BRASIL'){
+                res.innerHTML = '<p id="ptbr">Você é Brasileiro</p>'
+                
+            }
+            else{
+                res.innerHTML = '<p id="fora">Você é Estrangeiro</p>'            
+            }
+        }
+
+    </script>
+</body>
+</html>
