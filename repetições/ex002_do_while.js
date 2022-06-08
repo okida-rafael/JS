@@ -1,0 +1,10 @@
+var c = 8
+do {
+    console.log(`Passo ${c}`)
+    c--    
+}while (c > 7)
+    
+while (c >= 7){
+    console.log(`Passo ${c}`)
+    c--
+}
