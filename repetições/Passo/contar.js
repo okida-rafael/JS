@@ -10,29 +10,49 @@ var step2 = Number(step.value)
 
 
 if(inicio.value.length == 0){
-    window.alert('Digite um valor inicial')
+    window.alert('Digite um valor inicial!')
 }
 else if(end.value.length == 0){
-    window.alert('Digite um valor Final')
+    window.alert('Digite um valor Final!')
 }
-else if(step.value.length == 0){
-    window.alert('Valor de passo não inserido, passo considerado 1!')
+else if(step.value.length == 0 || step.value <= 0){
+    window.alert('Valor de passo incorreto, passo considerado 1!')
     
 res.innerHTML = ''
+res.innerHTML = 'Contando: </br>'
+if(inicio2 < end2){
 for(var c = inicio2; c <= end2; c++){
     res.innerHTML += `${c} 👉 `
     
 }
     res.innerHTML += `🔚`
 }
+else{
+    for(var c = inicio2; c >= end2; c--){
+        res.innerHTML += `${c} 👉 `
+        
+    }
+    res.innerHTML += `🔚`
+}
+}
 else
 {
-
-    res.innerHTML = ''
+    res.innerHTML = '' 
+    res.innerHTML = 'Contando: </br>'
+    
+    if(inicio2 < end2){
     for(var c = inicio2; c <= end2; c = c + step2){
         res.innerHTML += `${c} 👉 `
         
     }
         res.innerHTML += `🔚`
+}
+    else{
+        for(var c = inicio2; c >= end2; c = c - step2){
+            res.innerHTML += `${c} 👉 `
+            
+        }  
+        res.innerHTML += `🔚` 
+    }    
 }
 }
