@@ -3,13 +3,13 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(37, 101, 161);
-    text-align: center;
     font-weight: normal;
 }
 header{
     margin-top: 50px;
     margin-bottom: 30px;
     color: white;
+    text-align: center;
 }
 h1{
     text-shadow: 2px 3px 7px black;
@@ -22,13 +22,22 @@ section{
     box-shadow: 2px 2px 10px 1px black;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
     font-style: oblique;
+    
 }
 div{
     padding: 10px;
+    text-align: center;
 }
 footer{
     color: white;
     margin: 50px;
     font-style: italic;
     text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.548);
+    text-align: center;
+}
+
+select{
+    margin-left: 12vh;
+    margin-bottom: 30px;
+    border-radius: 5px;
 }
